@@ -1,0 +1,296 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+
+.flex-container {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	display: -webkit-flex; /* Safari */
+	display: flex;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+}
+.contact-p ,.home-p ,.about-p,.work-p {
+	display:none ;
+}
+
+.flex-title {
+	color: #f1f1f1;
+	position: relative;
+	font-size: 6vw;
+	margin: auto;
+	text-align: center;
+	transform: rotate(90deg);
+	top: 15%;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+	
+}
+
+.home:hover  .flex-title-home{
+    transform: rotate(0deg);
+}
+.about:hover  .flex-title-about{
+    transform: rotate(0deg);
+}
+.work:hover  .flex-title-work{
+    transform: rotate(0deg);
+}
+.contact:hover  .flex-title-contact{
+    transform: rotate(0deg);
+}
+
+
+.home:hover  .home-p{
+    display: inline-block;
+}
+.about:hover  .about-p{
+    display: inline-block;
+}
+.work:hover  .work-p{
+    display: inline-block;
+}
+.contact:hover  .contact-p{
+    display: inline-block;
+}
+
+
+.flex-slide {
+	-webkit-flex: 1;  /* Safari 6.1+ */
+	-ms-flex: 1;  /* IE 10 */    
+	flex: 1;
+	cursor: pointer;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    margin: 0px;
+    color: white;
+    font-size:40px;
+	
+}
+
+.flex-slide:hover {
+	-webkit-flex-grow: 3;
+	flex-grow: 3;
+}
+.home {
+    height: 100%;
+    width: 25%;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/lake-macquarie-71208_1920.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	
+}
+
+
+
+
+@keyframes aboutFlexSlide {
+	0% {
+		-webkit-flex-grow: 1;
+		flex-grow: 1;
+	}
+	50% {
+		-webkit-flex-grow: 3;
+		flex-grow: 3;
+	}
+	100% {
+		-webkit-flex-grow: 1;
+		flex-grow: 1;
+	}
+}
+
+
+
+
+
+@keyframes homeFlextitle {
+	0% {
+		transform: rotate(90deg);
+		top: 15%;
+	}
+	50% {
+		transform: rotate(0deg);
+		top: 15%;
+	}
+	100% {
+		transform: rotate(90deg);
+		top: 15%;
+	}
+}
+
+.flex-about-home {
+	opacity: 0;
+	
+}
+
+@keyframes flexAboutHome {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+
+
+.about {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/beach-2089959_1280.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;	
+}
+
+.contact {
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/lake-696098_1920.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+.work {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/forest-208517_1280.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+@media only sc
+
+// Preloader
+.spinner {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #222;
+	height: 100%;
+	width: 100%;
+	z-index: 11;
+	margin-top: 0;
+	color: #fff;
+	font-size: 1em;
+}
+@media only screen and (max-width: 1200px) {
+    .flex-container{
+        transform: rotate(270deg);
+        width: 134%;
+    } 
+    
+    .home:hover  .flex-title-home{
+        transform: rotate(90deg);
+    }
+    .about:hover  .flex-title-about{
+        transform: rotate(90deg);
+    }
+    .work:hover  .flex-title-work{
+        transform: rotate(90deg);
+    }
+    .contact:hover  .flex-title-contact{
+        transform: rotate(90deg);
+    }
+    .home:hover  .home-p{
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+    .about:hover  .about-p{
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+    .work:hover  .work-p{
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+    .contact:hover  .contact-p{
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+
+  }
+  @media only screen and (max-width: 500px) {
+    .flex-container{
+        transform: rotate(270deg);
+        width: 179%
+    } 
+    
+    .home:hover  .flex-title-home{
+        transform: rotate(90deg);
+    }
+    .about:hover  .flex-title-about{
+        transform: rotate(90deg);
+    }
+    .work:hover  .flex-title-work{
+        transform: rotate(90deg);
+    }
+    .contact:hover  .flex-title-contact{
+        transform: rotate(90deg);
+    }
+    .home:hover  .home-p{
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+    .about:hover  .about-p{
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+    .work:hover  .work-p{
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+    .contact:hover  .contact-p{
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+
+  }
+  @media only screen and (max-width: 380px) {
+    .flex-container{
+        transform: rotate(270deg);
+        width: 217%
+    } 
+    
+    .home:hover  .flex-title-home{
+        transform: rotate(90deg);
+    }
+    .about:hover  .flex-title-about{
+        transform: rotate(90deg);
+    }
+    .work:hover  .flex-title-work{
+        transform: rotate(90deg);
+    }
+    .contact:hover  .flex-title-contact{
+        transform: rotate(90deg);
+    }
+    .home:hover  .home-p{
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+    .about:hover  .about-p{
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+    .work:hover  .work-p{
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+    .contact:hover  .contact-p{
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+
+  }
